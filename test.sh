@@ -1,5 +1,5 @@
 #!/bin/sh
-../start.sh
+./start.sh
 /usr/local/hadoop/bin/hdfs dfs -rm -r /BigDataAsn/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /BigDataAsn/output/
 /usr/local/hadoop/bin/hdfs dfs -mkdir -p /BigDataAsn/input/
@@ -13,4 +13,4 @@
 /usr/local/hadoop/bin/hdfs dfs -cat /BigDataAsn/output/part-00000
 /usr/local/hadoop/bin/hdfs dfs -rm -r /BigDataAsn/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /BigDataAsn/output/
-../stop.sh
+./stop.sh
