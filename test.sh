@@ -3,7 +3,7 @@
 /usr/local/hadoop/bin/hdfs dfs -rm -r /BigDataAsn/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /BigDataAsn/output/
 /usr/local/hadoop/bin/hdfs dfs -mkdir -p /BigDataAsn/input/
-/usr/local/hadoop/bin/hdfs dfs -copyFromLocal /ssongyy/access.log.txt /BigDataAsn/input/
+/usr/local/hadoop/bin/hdfs dfs -copyFromLocal /BigDataAsn/access.log.txt /BigDataAsn/input/
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.9.2.jar \
 -file /BigDataAsn/mapper1.py -mapper ./ssongyy/BigDataAsn/mapper1.py \
 -file /BigDataAsn/reducer1.py -reducer ./ssongyy/BigDataAsn/reducer1.py \
