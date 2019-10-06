@@ -8,7 +8,7 @@
 -file ../ssongyy/BigDataAsn/mapper1.py -mapper ../ssongyy/BigDataAsn/mapper1.py \
 -file ../ssongyy/BigDataAsn/reducer1.py -reducer ../ssongyy/BigDataAsn/reducer1.py \
 -file ../ssongyy/BigDataAsn/mapper2.py -mapper ../ssongyy/BigDataAsn/mapper2.py \
--file ../ssongyy/BigDataAsn/reducer2.py -reducer ../ssongyy/BigDataAsn/reducer2.py \
+-file ../ssongyy/BigDataAsn/reducer2 .py -reducer ../ssongyy/BigDataAsn/reducer2 .py \
 -input /BigDataAsn/input/* -output /BigDataAsn/output/
 /usr/local/hadoop/bin/hdfs dfs -cat /BigDataAsn/output/part-00000
 /usr/local/hadoop/bin/hdfs dfs -rm -r /BigDataAsn/input/
