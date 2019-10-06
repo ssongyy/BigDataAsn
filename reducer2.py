@@ -2,18 +2,34 @@
 # coding: utf-8
 
 # In[ ]:
+from operator import itemgetter
+from collections import defaultdict
+from operator import itemgetter
 import re
 import sys
-from collections import defaultdict
+d={}
+d = defaultdict(list)
 top={}
 top = defaultdict(list)
-h={}
-h=defaultdict(list)
 timee=[]
+dict_ip_count = {}
 for line in sys.stdin:
-    line=line.strip('\n')
-    line=line.split('\t')  
-    h[line[0]].append(line[1])
+    line = line.strip()
+    ip, num = line.split('\t')
+    try:
+        num = int(num)
+        dict_ip_count[ip] = dict_ip_count.get(ip, 0) + num
+    except ValueError:
+        pass
+sorted_dict_ip_count = sorted(dict_ip_count.items(), key=itemgetter(0))
+for i in sorted_dict_ip_count:
+    ip = i[0]
+    num=i[1]
+    try:
+        num = int(num)
+        d[num].append(ip) 
+    except ValueError:
+        pass
 sorted_dd = sorted(d.keys(),reverse=True)
 for k in sorted_dd:
     for i in d[k]:
