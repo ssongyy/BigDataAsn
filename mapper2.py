@@ -2,8 +2,6 @@
 # coding: utf-8
 
 # In[ ]:
-
-
 from collections import defaultdict
 from collections import OrderedDict
 from operator import itemgetter
