@@ -18,5 +18,7 @@ for line in sys.stdin:
         pass
 od = OrderedDict(reversed(sorted(d.items())))
 for num,ip in od.items():
-     print ('%s\t%s\n' % (num, ip))
+     for i in ip:
+         print ('%s\t%s' % (num, ip))
+    print('\n')
 
