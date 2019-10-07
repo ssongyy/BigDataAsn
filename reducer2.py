@@ -43,6 +43,6 @@ for k in sorted_dd:
         if len(top[time])>=3 and time not in timee:
             timee.append(time)
             for i in top[time]:
-                print(time,i)
+                print('%s\t%s' %(time,i))
         else:
             continue
