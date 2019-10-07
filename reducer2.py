@@ -47,5 +47,5 @@ for k in sorted_dd:
                     print('%s\t%s' %(time,i))
             else:
                 continue
-      except ValueError:
-        pass
+     except ValueError:
+       pass
