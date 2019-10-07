@@ -4,7 +4,7 @@ read -p 'End point:' end
 bash /mapreduce-test/start.sh
 /usr/local/hadoop/bin/hdfs dfs -rm -r /lab2/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /lab2/output/
-/usr/local/hadoop/bin/hdfs dfs -mkdir -p /lab1/input/
+/usr/local/hadoop/bin/hdfs dfs -mkdir -p /lab2/input/
 /usr/local/hadoop/bin/hdfs dfs -copyFromLocal /mapreduce-test/mapreduce-test-data/access.log /lab2/input/
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.9.2.jar \
 -file ../BigDataAsn/mapper4.py -mapper ../BigDataAsn/mapper4.py \
