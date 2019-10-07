@@ -32,17 +32,20 @@ for i in sorted_dict_ip_count:
         pass
 sorted_dd = sorted(d.keys(),reverse=True)
 for k in sorted_dd:
-    for i in d[k]:
-        time=re.findall('([[0-9]+:[0-9]+])',i)
-        time=time[0]
-        value=re.findall(']([0-9]\S+)',i)
-        value=re.findall('([0-9]\S+)]',str(value))
-        value=value[0]
-        top[time].append(value)
-    for time in top.keys():
-        if len(top[time])>=3 and time not in timee:
-            timee.append(time)
-            for i in top[time]:
-                print('%s\t%s' %(time,i))
-        else:
-            continue
+    try:
+        for i in d[k]:
+            time=re.findall('([[0-9]+:[0-9]+])',i)
+            time=time[0]
+            value=re.findall(']([0-9]\S+)',i)
+            value=re.findall('([0-9]\S+)]',str(value))
+            value=value[0]
+            top[time].append(value)
+        for time in top.keys():
+            if len(top[time])>=3 and time not in timee:
+                timee.append(time)
+                for i in top[time]:
+                    print('%s\t%s' %(time,i))
+            else:
+                continue
+      except ValueError:
+        pass
