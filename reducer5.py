@@ -6,7 +6,7 @@
 
 from operator import itemgetter
 from collections import defaultdict
- import sys
+import sys
 ti={}
 ti = defaultdict(list)
 dict_ip_count = {}
