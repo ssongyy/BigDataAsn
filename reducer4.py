@@ -1,13 +1,10 @@
 
 # coding: utf-8
-
-# In[ ]:
-
 from operator import itemgetter
 import sys
-start=1
-end=5
 dict_ip_count = {}
+start = sys.argv[1]
+end = sys.argv[2]
 for line in sys.stdin:
     line = line.strip('\n') ##移除字符的回车 变成了[00:00]5.108.86.176	1 strip(\n)的作用就是把本来一一行一行的，全部连在一起
     ip, num = line.split('\t') ## 把空格去了split 的功能就是把空格去掉了ip 和number 之间的空格去掉了。变成了[00:00]5.108.86.176 1
