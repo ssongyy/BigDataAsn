@@ -1,6 +1,6 @@
 #!/bin/sh
-read -p 'Start point:' start
-read -p 'End point:' end
+#read -p 'Start point:' start
+#read -p 'End point:' end
 bash /mapreduce-test/start.sh
 /usr/local/hadoop/bin/hdfs dfs -rm -r /lab2/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /lab2/output/
