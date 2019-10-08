@@ -3,10 +3,10 @@
 
 # In[ ]:
 
-
 from operator import itemgetter
 import sys
-
+start=1
+end=5
 dict_ip_count = {}
 for line in sys.stdin:
     line = line.strip('\n') ##移除字符的回车 变成了[00:00]5.108.86.176	1 strip(\n)的作用就是把本来一一行一行的，全部连在一起
