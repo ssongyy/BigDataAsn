@@ -21,9 +21,11 @@ for line in sys.stdin:
         pass
 sorted_dict_ip_count = sorted(dict_ip_count.items(), key=itemgetter(1),reverse=True)
 for ip, count in sorted_dict_ip_count:
-    time,i =ip.split('_')
-    ti[time].append(i)
-    if len(ti[time])>=3 and time not in timee:
-        timee.append(time)
-        print ('%s\t%s' % (time, ti[time]))
-
+    try:
+        time,i =ip.split('_')
+        ti[time].append(i)
+        if len(ti[time])>=3 and time not in timee:
+            timee.append(time)
+            print ('%s\t%s' % (time, ti[time]))
+    except ValueError:
+        pass
